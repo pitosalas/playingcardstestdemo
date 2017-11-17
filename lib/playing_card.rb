@@ -1,5 +1,3 @@
-require_relative "test_helper"
-
 # Represent Standard Playng Cards
 class PlayingCard
   attr_reader :rank, :suit
