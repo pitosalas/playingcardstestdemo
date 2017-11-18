@@ -1,7 +1,7 @@
 # Represent Standard Playng Cards
 class PlayingCard
   attr_reader :rank, :suit
-  def initialize(r: nil, s: nil)
+  def initialize(suit=0, rank=0)
     @suit = suit
     @rank = rank
   end
@@ -20,7 +20,7 @@ class PlayingCard
     rank_to_english + ' of ' + @suit
   end
 
-  def valid?()
+  def valid?
     rank >= 1 && rank <= 13 && !suit.nil?
   end
 
