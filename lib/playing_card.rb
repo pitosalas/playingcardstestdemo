@@ -27,20 +27,9 @@ class PlayingCard
   private
 
   def rank_to_english
-    if @rank == '1'
-      'Ace'
-    elsif @rank > 1 && @rank < 11
-      number_to_english(@rank)
-    elsif @rank == 11
-      'Jack'
-    elsif @rank == 12
-      'Queen'
-    elsif @rank == 13
-      'King'
+    if (@rank <= 0 || @rank > 13)
+      raise Exception
     end
-  end
-
-  def number_to_english(val)
-    %w[fail0 fail1 two three four five six seven eight nine ten][val]
+    %w[fail0 Ace two three four five six seven eight nine ten Jack Queen King][@rank]
   end
 end
